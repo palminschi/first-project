@@ -1,0 +1,14 @@
+
+.header {
+    grid-area: h;
+    background-color: #FF4500;
+  }
+  .header img {
+    width: 50px;
+    margin: 25px 30px;
+    float: left;
+  }
+  h1 {
+    float: left;
+    color: #FAF0E6;
+  }
