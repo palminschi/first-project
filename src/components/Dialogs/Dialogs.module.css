@@ -1,0 +1,14 @@
+.content {
+    display: grid;
+    grid-template-columns: 3fr 7fr;
+}
+.users {
+    border: 1px solid #333333;
+    height: 400px;
+}
+.messages {
+    border: 1px solid #333333;
+}
+.text {
+    margin-top: 300px;
+}

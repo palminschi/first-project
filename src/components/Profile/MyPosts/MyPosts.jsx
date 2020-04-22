@@ -2,6 +2,14 @@ import React from "react";
 import classes from './MyPosts.module.css';
 import Post from "./Post/Post";
 
+let dataPosts = [
+  {id:1,like:"15",message:"Hi, how are you?"},
+  {id:2,like:"21",message:"It's my first message"},
+  {id:3,like:"6",message:"Hello!"}
+];
+
+let elementPost = dataPosts.map( post => <Post like={post.like} message={post.message}/> )
+
 const MyPosts = () => {
     return (
       <div className={classes.myposts}>
@@ -10,9 +18,7 @@ const MyPosts = () => {
           <button className={classes.button}>Add post</button>
         </div>
         <div className={classes.posts}>
-          <Post like="15" message="Hi, how are you?"/>
-          <Post like="21" message="It's my first message"/>
-          <Post like="6" message="Hello!"/>
+          {elementPost}
         </div>
       </div>
     )}

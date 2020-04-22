@@ -2,20 +2,24 @@
 .nav {
     grid-area: n;
     background-color: #DEB887;
+    height: 300px;
   }
-
   .item {
-    margin: 10px 20px;
+    margin: 30px 30px;
+    
+  }
+  .navlink {
+    padding: 10px 30px;
     border: 2px solid #333333;
     border-radius: 10px;
     text-align: center;
   }
-  .item:hover{
+  .navlink:hover{
     color: #ffffff;
     background-color: #800000;
     cursor: pointer;
   }
-  .item.active {
+  .active {
     color: #ffffff;
     background-color: #800000;
   }

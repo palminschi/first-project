@@ -16,3 +16,8 @@
   grid-area: c;
   background-color: #FFFACD;
 }
+
+a {
+  text-decoration: none;
+  color: #333333;
+}
