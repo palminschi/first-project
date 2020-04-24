@@ -8,7 +8,9 @@
 }
 .messages {
     border: 1px solid #333333;
+    display: grid;
+    grid-template-areas: "y" "m";
 }
 .text {
-    margin-top: 300px;
+    
 }

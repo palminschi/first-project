@@ -3,10 +3,12 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
+import dataBase from './state/redux';
+
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <App dataBase={dataBase}/>
   </React.StrictMode>,
   document.getElementById('root')
 );
