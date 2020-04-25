@@ -2,10 +2,11 @@ import React from "react";
 import classes from './Navbar.module.css';
 import { NavLink } from "react-router-dom";
 import FriendsItem from "./FriendsItem/FriendsItem";
-
+ 
 const Navbar = () => {
     return (
      <nav className={classes.nav}>
+        <div className={classes.title_menu}>Menu</div>
         <div className={classes.item}>
           <NavLink to='/profile' activeClassName={classes.active} className={classes.navlink}>Profile</NavLink>
         </div>

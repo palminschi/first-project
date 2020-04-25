@@ -1,13 +1,14 @@
 .you {
-    
+    color: #393939;
     margin: 5px;
     max-width: 80px;
-    background-color: rgb(49, 153, 110);
+    background-color: #EEEEEE;
     border-radius: 8px;
 }
 .my {
+    color: #393939;
     margin: 5px;
     max-width: 80px;
-    background-color: rgb(164, 102, 170);
+    background-color:#EEEEEE;
     border-radius: 8px;
 }

@@ -1,13 +1,15 @@
 
 .header {
     grid-area: h;
-    background-color: #FF4500;
+    background-color: #343434;
+    border-radius: 5px;
+    box-shadow: 0 0 2px;
   }
   .header img {
-    width: 50px;
-    margin: 25px 30px;
+    width: 100px;
+    margin: 20px 30px;
     float: left;
-  }
+  } 
   h1 {
     float: left;
     color: #FAF0E6;

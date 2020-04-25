@@ -2,19 +2,22 @@ import React from "react";
 import classes from './Dialogs.module.css';
 import User from "./User/User";
 import Messages from "./Messages/Messages";
-import {addMessageActionCreator, updateNewMessageActionCreator} from '../../state/dialogs_reducer';
+import {addMessageActionCreator, updateNewMessageActionCreator} from '../../redux/dialogs_reducer';
 
 const Dialogs = (props) => {
-    let elementsUsers = props.data.dataUsers.map( (user) => <User id={user.id} name={user.name}/>);
-    let elementsMyMessages = props.data.dataMyMessages.map ( mess => <Messages id={mess.id} myMessage={mess.message}/>);
-    let elementsFriendsMessages = props.data.dataFriendMessages.map( mess => <Messages id={mess.id} youMessage={mess.message}/>);
+
+    let state = props.store.getState().dialogsPage;
+
+    let elementsUsers = state.dataUsers.map( (user) => <User id={user.id} name={user.name}/>);
+    let elementsMyMessages = state.dataMyMessages.map ( mess => <Messages id={mess.id} myMessage={mess.message}/>);
+    let elementsFriendsMessages = state.dataFriendMessages.map( mess => <Messages id={mess.id} youMessage={mess.message}/>);
 
     let addMessage = () => {
-        props.dispatch(addMessageActionCreator())
+        props.store.dispatch(addMessageActionCreator())
     }
     let onMessageChange = (event) => {
         let message = event.target.value
-        props.dispatch(updateNewMessageActionCreator(message))
+        props.store.dispatch(updateNewMessageActionCreator(message))
     }
     
 
@@ -33,7 +36,7 @@ const Dialogs = (props) => {
                     <textarea 
                         className={classes.textarea}
                         onChange={onMessageChange}
-                        value={props.data.newMessage}
+                        value={state.newMessage}
                         placeholder="Enter your message"/>
                     
                     <button onClick={addMessage} 

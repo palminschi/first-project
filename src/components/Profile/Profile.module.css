@@ -1,8 +1,11 @@
+.content {
+}
   .image {
     height: 200px;
     width: 950px;
     margin: 10px 20px;
-    
+    opacity: 0.85;
+    border-radius: 5px;
   }
   .ava_descr {
     display: grid;
@@ -13,9 +16,12 @@
     grid-area: a;
     width: 150px;
     margin: 20px;
+    border-radius: 75px;
+    border: 2px solid #333333;
     
   }
   .description {
     grid-area: d;
     margin: 25px 10px;
+    color: #B1CCCC;
   }

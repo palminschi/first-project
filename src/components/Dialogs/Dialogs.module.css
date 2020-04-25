@@ -2,6 +2,7 @@
     display: grid;
     grid-template-columns: 3fr 7fr;
     height: 500px;
+    color: #ffffff;
 }
 .users {
     border: 1px solid #333333;
@@ -19,15 +20,23 @@
 .text_input {
     display: grid;
     grid-template-columns: 9fr 1fr;
-    border: 2px solid #a87233;
 }
 .textarea {
+    color: #ffffff;
     height: 95px;
+    background-color: #393939;
+     border-radius: 10px;
+     border: none;
+     resize: none;
+     outline:none;
 }
 .btn_send {
-    color: #ffffff;
-    background-color: rgb(226, 167, 78);
     font-size: 20px;
     font-weight: 900;
-    border-left: 2px solid #a87233;
+    background-color: #088DCD;
+    border: none;
+    border-radius: 5px;
+     color: #ffffff;
+     font-weight: 600;
+     outline:none;
 }

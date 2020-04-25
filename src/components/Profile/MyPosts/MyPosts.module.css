@@ -2,7 +2,9 @@
   margin: 20px;
 }
 .newpost {
-  background-color: burlywood;
+  background-color: #424242;
+  border-radius: 5px;
+  box-shadow: 0 0 2px;
   height: 80px;
   max-width: 750px;
   font-size: 30px;
@@ -11,13 +13,28 @@
     "t b"
 }
 .text {
+  color: #ffffff;
   margin: 10px;
   width: 600px;
   height: 50px;
+  background-color: #393939;
+  border-radius: 10px;
+  border: none;
+  resize: none;
+  outline:none;
 }
 .button {
-  width: 50px;
-  height: 50px;
-  margin:10px;
+  width: 70px;
+  height: 30px;
+  margin: auto 5px;
+  background-color: #088DCD;
+  border: none;
+  border-radius: 5px;
+  color: #ffffff;
+  font-weight: 600;
+  outline:none;
+}
+.posts {
+  color: #B1CCCC;
 }
 

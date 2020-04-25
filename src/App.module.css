@@ -1,8 +1,12 @@
+
+body {
+  background-color: #505050;
+}
 .app_wrapper {
   margin: 0 auto;
   max-width: 1200px;
   display: grid;
-
+  
   grid-template-areas: 
     "h h"
     "n c";
@@ -14,7 +18,9 @@
 
 .content {
   grid-area: c;
-  background-color: #FFFACD;
+  border-radius: 5px;
+  box-shadow: 0 0 2px;
+  background-color: #424242;
 }
 
 a {

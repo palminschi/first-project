@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
-import store from './state/redux'
+import store from './redux/redux-store'
 
 
 
@@ -11,13 +11,17 @@ import store from './state/redux'
  let rerender = (state) => {
   ReactDOM.render(
     <React.StrictMode>
-      <App state={store.getState()} dispatch={store.dispatch.bind(store)} />
+      <App dispatch={store.dispatch.bind(store)} store={store} state={state}/>
     </React.StrictMode>, document.getElementById('root')
   );
 }
 
 rerender(store.getState());
-store.subscribe(rerender);
+
+store.subscribe(() => {
+  let state = store.getState();
+  rerender(state);
+});
 
 
 serviceWorker.unregister();

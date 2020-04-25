@@ -1,11 +1,11 @@
 import React from "react";
 import classes from './MyPosts.module.css';
 import Post from "./Post/Post";
-import { addPostActionCreator, updateNewPostTextActionCreator } from "../../../state/profile_reducer";
+import { addPostActionCreator, updateNewPostTextActionCreator } from "../../../redux/profile_reducer";
 
 
 const MyPosts = (props) => {
-  let elementPost = props.profilePage.dataPosts.map( post => <Post like={post.like} message={post.message}/> )
+  let elementPost = props.dataPosts.map( post => <Post like={post.like} message={post.message}/> )
 
   let newPost = React.createRef();
 
@@ -25,8 +25,8 @@ const MyPosts = (props) => {
             ref={newPost} 
             className={classes.text} 
             onChange={onPostChange} 
-            value={props.profilePage.newPostText}/>
-          <button onClick={addPost} className={classes.button}>Add post</button>
+            value={props.newPostText}/>
+          <button onClick={addPost} className={classes.button}>Post</button>
         </div>
         <div className={classes.posts}>
           {elementPost}
