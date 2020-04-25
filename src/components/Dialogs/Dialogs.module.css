@@ -1,16 +1,33 @@
 .content {
     display: grid;
     grid-template-columns: 3fr 7fr;
+    height: 500px;
 }
 .users {
     border: 1px solid #333333;
-    height: 400px;
+    
 }
 .messages {
     border: 1px solid #333333;
     display: grid;
-    grid-template-areas: "y" "m";
+    grid-template-rows: 8fr 2fr;
 }
-.text {
-    
+.dialogs {
+    display: grid;
+    grid-template-columns: 5fr 5fr;
+}
+.text_input {
+    display: grid;
+    grid-template-columns: 9fr 1fr;
+    border: 2px solid #a87233;
+}
+.textarea {
+    height: 95px;
+}
+.btn_send {
+    color: #ffffff;
+    background-color: rgb(226, 167, 78);
+    font-size: 20px;
+    font-weight: 900;
+    border-left: 2px solid #a87233;
 }
